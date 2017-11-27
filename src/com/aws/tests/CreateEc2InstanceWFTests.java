@@ -35,6 +35,8 @@ public class CreateEc2InstanceWFTests {
                   e);
       }
   }  
+  
+  //Parameterized all configuration parameters from testNGXML or a JSON reader
   @Test
   public void CreateEc2InstanceWFTest() 
   {
@@ -51,6 +53,7 @@ public class CreateEc2InstanceWFTests {
 	  waitTillInstanceStatusChangesToRunning(instanceId);
 	  stopInstance(instanceId);
 	  terminateInstance(instanceId);
+	  //Verify state is terminated.
   }
   
   
